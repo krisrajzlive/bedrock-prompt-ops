@@ -1,0 +1,5 @@
+Northwind Logistics Ltd - INVOICE 88213
+Bill to: Priya Raman, 14 Elm Street, Austin TX 78701, priya.raman@example.com
+Amount due: 4,820.00 USD. Original due date: 2026-09-20. This invoice is now 24 days overdue.
+Unless payment is received within 3 days we will suspend all shipments under contract NL-5521.
+Pay by card or call 512-555-0148.

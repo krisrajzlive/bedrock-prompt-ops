@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bedrock-prompt-ops"
+version = "0.1.0"
+description = "Versioned prompt lifecycle on LangSmith (commit tags, promotion, rollback) executed on Amazon Bedrock, Textract and Comprehend."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langchain-core>=1.0",
+  "langchain-aws>=1.0",
+  "langsmith>=0.7",
+  "boto3>=1.35",
+  "pydantic>=2.7",
+  "pydantic-settings>=2.3",
+  "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "moto[s3]>=5", "pillow"]
+
+[project.scripts]
+promptops = "promptops.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
